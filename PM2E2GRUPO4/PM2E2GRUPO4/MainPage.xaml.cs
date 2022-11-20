@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+//Hello wrdl
 
 namespace PM2E2GRUPO4
 {
