@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.pm2e2grupo4">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" 
+          android:versionName="1.0" package="com.companyname.pm2e2grupo4">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
     <application android:label="PM2E2GRUPO4.Android" android:theme="@style/MainTheme">
-     <provider android:name="android.support.v4.content.FileProvider"
-				android:authorities="${applicationId}.fileprovider"
-				android:exported="false"
-				android:grantUriPermissions="true">
-        <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-          android:resource="@xml/file_paths"></meta-data>
-     </provider>
+      <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
+        <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
+      </provider>
+      
       <meta-data android:name="com.google.android.geo.API_KEY" 
                  android:value="AIzaSyBb_6RfHfYxgLIxFuu_qMOYiRO7v9ol5pg" />
       
