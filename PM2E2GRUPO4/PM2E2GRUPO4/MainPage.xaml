@@ -1,24 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PM2E2GRUPO4.MainPage">
+             x:Class="PM2E2GRUPO4.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Frame Grid.Row="0" Padding="0,0,0,0">
+                <Label Text="Nueva Ubicacion" 
+                       HorizontalOptions="Center"
+                       TextColor="Black" 
+                       FontSize="30"
+                       FontAttributes="Bold"/>
+            </Frame>
 
+            <Grid>
+                <Image Source="logo.png"
+               Aspect="AspectFit"
+               WidthRequest="110"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center" />
+            </Grid>
+
+            <StackLayout>
+                <Label Text="IMAGEN SITIO VISITADO"
+                   HorizontalOptions="Center"/>
+
+                <Image x:Name="imgFoto"
+                       Source="imgMuestra.png"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center" 
+                       WidthRequest="300"
+                       HeightRequest="220" >
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"
+                                              NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+            <Label Text="Latitude:" 
+               Margin="30,10,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="20"/>
+
+            <Entry x:Name="txtLatitude"
+                   Keyboard="Numeric"
+                   Placeholder="Ejemplo: 15.67"
+                   HorizontalOptions="FillAndExpand" 
+                   Margin="30,0,30,0"
+                   IsEnabled="False"/>
+
+            <Label Text="Longitud:" 
+               Margin="30,10,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="20"/>
+
+            <Entry x:Name="txtLongitude"
+                   Keyboard="Numeric"
+                   Placeholder="Ejemplo: -81.78"
+                   HorizontalOptions="FillAndExpand" 
+                   Margin="30,0,30,0"
+                   IsEnabled="False"/>
+
+            <Label Text="Descripcion:" 
+               Margin="30,10,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="20"/>
+
+            <Editor x:Name="txtDescription"
+                    Keyboard="Text"
+                    AutoSize="TextChanges"
+                    MaxLength="50"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="30,0,30,0"
+                    Placeholder="Lancetilla Tela, Atlantida"/>
+
+            <Label Text="Grabar nota de voz"
+                x:Name="txtMessage"   
+               Margin="30,10,0,0"
+               HorizontalOptions="StartAndExpand" 
+               FontSize="20"/>
+
+            <Button Text="Grabar audio" 
+                    x:Name="btnGrabar" 
+                    Margin="20,0,20,0"
+                    Clicked="btnGrabar_Clicked"/>
+
+            <Grid Margin="20,10,20,0">
+                <Button x:Name="btnAdd"
+                            Text="Agregar"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="0"
+                            Clicked="btnAdd_Clicked"/>
+
+                <Button x:Name="btnList"
+                            Text="Lista Sitios"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Column="1"
+                            Clicked="btnList_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
