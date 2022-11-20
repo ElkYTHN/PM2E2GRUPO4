@@ -19,13 +19,12 @@
                        VerticalOptions="Center"
                        TextColor="Black" 
                        FontSize="20"
-                       FontAttributes="Bold"/>                       
+                       FontAttributes="Bold"/>
 
                 <Button Text="Atras"
                         HorizontalOptions="Start"
-                        Clicked="Button_Clicked" />                                
+                        Clicked="Button_Clicked" />
             </Grid>
-
         </Frame>
 
         <Grid Padding="15,0,15,0">
