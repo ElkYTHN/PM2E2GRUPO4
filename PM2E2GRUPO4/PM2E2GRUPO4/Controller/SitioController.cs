@@ -11,7 +11,7 @@ namespace PM2E2GRUPO4.Controller
     public class SitioController
     {
 
-        private static readonly string URL_SITIOS = "https://elkin.online/APIEX/";
+        private static readonly string URL_SITIOS = "https://elkinhn.online/APIEX/";
         private static HttpClient client = new HttpClient();
 
         public async static Task<List<Sitio>> GetAllSite()
