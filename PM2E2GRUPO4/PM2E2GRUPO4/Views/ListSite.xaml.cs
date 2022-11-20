@@ -1,8 +1,8 @@
 ﻿using Acr.UserDialogs;
 using Plugin.AudioRecorder;
-using M2E2GRUPO4.Views;
-using M2E2GRUPO4.Controller;
-using M2E2GRUPO4.Models;
+using PM2E2GRUPO4.Views;
+using PM2E2GRUPO4.Controller;
+using PM2E2GRUPO4.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -142,14 +140,10 @@ namespace PM2E2GRUPO4.Views
             try
             {
                 await Task.Delay(1000);
-
                 UserDialogs.Instance.ShowLoading("Cargando", MaskType.Gradient);
-
                 listSites.ItemsSource = await SitioController.GetAllSite();
-
                 await Task.Delay(500);
                 UserDialogs.Instance.HideLoading();
-
                 var current = Connectivity.NetworkAccess;
 
                 if (current != NetworkAccess.Internet)
