@@ -9,9 +9,9 @@
 
             <Frame Grid.Row="0" Padding="0,0,0,0">
 
-                <Label Text="Nueva Ubicacion" 
+                <Label Text="NUEVA UBICACION" 
                        HorizontalOptions="Center"
-                       TextColor="Black" 
+                       TextColor="#01A3FF" 
                        FontSize="30"
                        FontAttributes="Bold"
                        />
@@ -28,8 +28,15 @@
             </Grid>
 
             <StackLayout>
-                <Label Text="IMAGEN SITIO VISITADO"
-                   HorizontalOptions="Center"
+                <Label  Text="IMAGEN SITIO VISITADO"
+                        HorizontalOptions="Center"
+                        TextColor="#01A3FF" 
+                        FontSize="20"
+                   />
+                
+                <Label Text="CLICK PARA TOMAR CAPTURA"
+                       TextColor="#01A3FF"
+                       HorizontalOptions="Center"
                    />
 
                 <Image x:Name="imgFoto"
@@ -47,10 +54,11 @@
                 </Image>
             </StackLayout>
 
-            <Label Text="Latitude:" 
+            <Label Text="Latitud:" 
                Margin="30,10,0,0"
                HorizontalOptions="StartAndExpand" 
-               FontSize="20"/>
+               FontSize="20"
+               TextColor="#01A3FF"/>
 
             <Entry x:Name="txtLatitude"
                    Keyboard="Numeric"
@@ -63,6 +71,7 @@
             <Label Text="Longitud:" 
                Margin="30,10,0,0"
                HorizontalOptions="StartAndExpand" 
+               TextColor="#01A3FF"
                FontSize="20"/>
 
             <Entry x:Name="txtLongitude"
@@ -75,6 +84,7 @@
 
             <Label Text="Descripcion:" 
                Margin="30,10,0,0"
+               TextColor="#01A3FF"
                HorizontalOptions="StartAndExpand" 
                FontSize="20"/>
 
@@ -84,18 +94,22 @@
                     MaxLength="50"
                     HorizontalOptions="FillAndExpand"
                     Margin="30,0,30,0"
-                    Placeholder="Lancetilla Tela, Atlantida"
+                    Placeholder="Roatan, Honduras"
                     />
 
-            <Label Text="Grabar nota de voz"
-                x:Name="txtMessage"   
-               Margin="30,10,0,0"
-               HorizontalOptions="StartAndExpand" 
-               FontSize="20"/>
+            <Label Text="CLICK EN GRABAR VOZ"
+                   TextColor="#01A3FF"
+                   HorizontalOptions="Center"
+                   x:Name="txtMessage"   
+                   FontSize="20"/>
 
             <Button Text="Grabar audio" 
                     x:Name="btnGrabar" 
                     Margin="20,0,20,0"
+                    BackgroundColor="#2D90F9"
+                    CornerRadius="25"
+                    FontAttributes="Bold"
+                    FontSize="20"
                     Clicked="btnGrabar_Clicked"/>
 
             <Grid Margin="20,10,20,0">
@@ -103,12 +117,16 @@
                             Text="Agregar"
                             HorizontalOptions="FillAndExpand"
                             Grid.Column="0"
+                            BackgroundColor="#2D90F9"
+                            CornerRadius="25"
                             Clicked="btnAdd_Clicked"/>
 
                 <Button x:Name="btnList"
                             Text="Lista Sitios"
                             HorizontalOptions="FillAndExpand"
                             Grid.Column="1"
+                            BackgroundColor="#2D90F9"
+                            CornerRadius="25"
                             Clicked="btnList_Clicked"/>
             </Grid>
 

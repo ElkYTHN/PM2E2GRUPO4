@@ -15,15 +15,17 @@
     <StackLayout>
         <Frame Padding="0,0,0,0" HeightRequest="50">
             <Grid>
-                <Label Text="Ubicaciones Salvadas" 
+                <Label Text="Ubicaciones Guardadas" 
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       TextColor="Black" 
+                       TextColor="#01A3FF" 
                        FontSize="20"
                        FontAttributes="Bold"
                        />
 
                 <Button Text="Atras"
+                       BackgroundColor="#2D90F9"
+                       CornerRadius="25"
                         HorizontalOptions="Start"
                         Clicked="Button_Clicked"
                                  />
@@ -77,6 +79,8 @@
                             Text="Eliminar/Actualizar"
                             HorizontalOptions="FillAndExpand"
                             Grid.ColumnSpan="2"
+                            BackgroundColor="#2D90F9"
+                            CornerRadius="25"
                             Grid.Row="0"
                             HeightRequest="40"
                             Clicked="btnDelete_Clicked"
@@ -86,6 +90,8 @@
                             Text="Ver Mapa"
                             HorizontalOptions="FillAndExpand"
                             Grid.Column="0"
+                            BackgroundColor="#2D90F9"
+                            CornerRadius="25"
                             Grid.Row="1"
                             HeightRequest="40"
                             Clicked="btnViewMapa_Clicked"
@@ -93,7 +99,9 @@
 
                     <Button x:Name="btnViewListen"
                             Text="Escuchar Audio"
-                            HorizontalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand" 
+                            BackgroundColor="#2D90F9"
+                            CornerRadius="25"
                             Grid.Column="1"
                             Grid.Row="1"
                             HeightRequest="40"

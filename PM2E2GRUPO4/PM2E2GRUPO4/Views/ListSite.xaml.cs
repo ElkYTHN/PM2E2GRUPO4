@@ -95,7 +95,7 @@ namespace PM2E2GRUPO4.Views
 
         private async void DeleteSite(Sitio site)
         {
-            var status = await DisplayAlert("Aviso", $"¿Desea eliminar el sitio con Description: {Site.Description}?", "SI", "NO");
+            var status = await DisplayAlert("Aviso", $"¿Desea eliminar el sitio con Descripcion: {Site.Description}?", "SI", "NO");
 
             if (status)
             {
