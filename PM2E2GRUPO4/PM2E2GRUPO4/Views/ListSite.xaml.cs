@@ -188,7 +188,7 @@ namespace PM2E2GRUPO4.Views
         private void listeAudio(byte[] bytes)
         {
 
-            var folderPath = "/storage/emulated/0/Android/data/com.companyname.pm2e2grupo1/files/Audio";
+            var folderPath = "/storage/emulated/0/Android/data/com.companyname.pm2e2grupo4/files/Audio";
 
             var nameAudio = "temp.wav";
 
