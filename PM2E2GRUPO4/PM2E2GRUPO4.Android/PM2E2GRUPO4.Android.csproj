@@ -57,8 +57,8 @@
     <PackageReference Include="Acr.UserDialogs">
       <Version>7.2.0.564</Version>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json.Bson">
-      <Version>1.0.2</Version>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.AudioRecorder">
       <Version>1.1.0</Version>
