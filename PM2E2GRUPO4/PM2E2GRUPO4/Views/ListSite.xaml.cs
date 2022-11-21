@@ -45,6 +45,7 @@ namespace PM2E2GRUPO4.Views
             }
         }
 
+
         private void listSites_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             try
@@ -55,6 +56,7 @@ namespace PM2E2GRUPO4.Views
             {
                 Message("Error:", ex.Message);
             }
+
         }
 
         private async void btnDelete_Clicked(object sender, EventArgs e)
@@ -77,8 +79,12 @@ namespace PM2E2GRUPO4.Views
                 }
                 else
                 {
+
                     editando = true;
+
                     await Navigation.PushModalAsync(new UpdateSite(Site));
+
+
                 }
             }
             catch (Exception ex)
@@ -135,15 +141,21 @@ namespace PM2E2GRUPO4.Views
             }
         }
 
+
         private async void LoadData()
         {
+
             try
             {
                 await Task.Delay(1000);
+
                 UserDialogs.Instance.ShowLoading("Cargando", MaskType.Gradient);
+
                 listSites.ItemsSource = await SitioController.GetAllSite();
+
                 await Task.Delay(500);
                 UserDialogs.Instance.HideLoading();
+
                 var current = Connectivity.NetworkAccess;
 
                 if (current != NetworkAccess.Internet)
@@ -164,16 +176,19 @@ namespace PM2E2GRUPO4.Views
 
         #region Metodos Utiles
 
+
         private async void Message(string title, string message)
         {
             await DisplayAlert(title, message, "OK");
         }
 
+
         #endregion Metodos Utiles
 
         private void listeAudio(byte[] bytes)
         {
-            var folderPath = "/storage/emulated/0/Android/data/com.companyname.pm2e2grupo4/files/Audio";
+
+            var folderPath = "/storage/emulated/0/Android/data/com.companyname.pm2e2grupo1/files/Audio";
 
             var nameAudio = "temp.wav";
 
@@ -198,8 +213,10 @@ namespace PM2E2GRUPO4.Views
             }
             catch (Exception ex)
             {
+
                 Message("Error: ", ex.Message);
             }
+
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -209,11 +226,13 @@ namespace PM2E2GRUPO4.Views
 
         private void btnViewListen_Clicked(object sender, EventArgs e)
         {
+
             if (Site == null)
             {
                 Message("Aviso", "Seleccione un sitio");
                 return;
             }
+
             try
             {
                 listeAudio(Site.AudioFile);

@@ -20,10 +20,10 @@ namespace PM2E2GRUPO4.Models
         public String Description { get; set; }
 
         [JsonProperty("fotografia")]
-        public Byte[] Image { get; set; }
+        public byte[] Image { get; set; }
 
         [JsonProperty("audiofile")]
-        public Byte[] AudioFile { get; set; }
+        public byte[] AudioFile { get; set; }
         
     }
 }
